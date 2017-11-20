@@ -1,6 +1,5 @@
 var azureStorage = require('azure-storage');
 
-var stoConn="DefaultEndpointsProtocol=https;AccountName=stobj;AccountKey=yeO3iaZ7tu5LWky8tRHblFv6W/xZ4PqXCRTfZ19EAnpAw6NZZ2AhNnVBXehKKccj/blnQjwOLhvySD7rJF2QuQ==;EndpointSuffix=core.chinacloudapi.cn";
 var blobUri = 'https://stobj.blob.core.chinacloudapi.cn';
 var SAS_TOKEN = generateSasToken('testupload','testfile', azureStorage.BlobUtilities.SharedAccessPermissions.WRITE ).token
 var blobService = azureStorage.createBlobServiceWithSas(blobUri, SAS_TOKEN);
