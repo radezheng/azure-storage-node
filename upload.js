@@ -7,6 +7,7 @@ var blobService = azureStorage.createBlobServiceWithSas(blobUri, SAS_TOKEN);
 
 var file = "D:/Training/OneDrive_10_20_2016.zip";
 
+
 var customBlockSize = 1024 * 1024 * 4;//4M
 blobService.singleBlobPutThresholdInBytes = customBlockSize;
 
